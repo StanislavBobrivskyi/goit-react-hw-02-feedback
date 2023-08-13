@@ -1,4 +1,4 @@
-const Section = ({ title, children }) => {
+export const Section = ({ title, children }) => {
   return (
     <div>
       <h2>{title}</h2>
@@ -6,5 +6,3 @@ const Section = ({ title, children }) => {
     </div>
   );
 };
-
-export { Section };

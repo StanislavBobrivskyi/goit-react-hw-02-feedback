@@ -1,4 +1,4 @@
-const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+export const Feedbacks = ({ options, onLeaveFeedback }) => {
   return (
     <div>
       {options.map(option => (
@@ -9,5 +9,3 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     </div>
   );
 };
-
-export { FeedbackOptions };
