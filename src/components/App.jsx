@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Feedbacks } from './Feedback/Feedbacks';
+import { NotificationMessage } from './Notification/Notification';
 import { Section } from './Section/Section';
 import { Statistics } from './Statistics/Statistics';
 
@@ -42,13 +43,17 @@ export class App extends Component {
         </Section>
 
         <Section title="Statistics">
-          <Statistics
-            good={good}
-            neutral={neutral}
-            bad={bad}
-            total={totalFeedback}
-            positivePercentage={positivePercentage}
-          />
+          {totalFeedback === 0 ? (
+            <NotificationMessage />
+          ) : (
+            <Statistics
+              good={good}
+              neutral={neutral}
+              bad={bad}
+              total={totalFeedback}
+              positivePercentage={positivePercentage}
+            />
+          )}
         </Section>
       </div>
     );
